@@ -1,0 +1,261 @@
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+	word-wrap: break-word;
+}
+
+/* Font family */
+
+@font-face {
+    font-family: 'HelveticaNeueCyr_bold';
+    src: url('HelveticaNeueCyr-Bold.eot');
+    src: url('HelveticaNeueCyr-Bold.eot?#iefix') format('embedded-opentype'),
+        url('HelveticaNeueCyr-Bold.woff2') format('woff2'),
+        url('HelveticaNeueCyr-Bold.woff') format('woff'),
+        url('HelveticaNeueCyr-Bold.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaNeueCyr_med';
+    src: url('HelveticaNeueCyr-Medium.eot');
+    src: url('HelveticaNeueCyr-Medium.eot?#iefix') format('embedded-opentype'),
+        url('HelveticaNeueCyr-Medium.woff2') format('woff2'),
+        url('HelveticaNeueCyr-Medium.woff') format('woff'),
+        url('HelveticaNeueCyr-Medium.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaNeueCyr_black';
+    src: url('HelveticaNeueCyr-Black.eot');
+    src: url('HelveticaNeueCyr-Black.eot?#iefix') format('embedded-opentype'),
+        url('HelveticaNeueCyr-Black.woff2') format('woff2'),
+        url('HelveticaNeueCyr-Black.woff') format('woff'),
+        url('HelveticaNeueCyr-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+.med() {
+	font-family: 'HelveticaNeueCyr_med', sans-serif;
+}
+
+.bold() {
+	font-family: 'HelveticaNeueCyr_bold', sans-serif;
+}
+
+.black() {
+	font-family: 'HelveticaNeueCyr_black', sans-serif;
+}
+
+/* Text */
+
+.title {
+	font-size: 3.5rem;
+	.black();
+	font-weight: 900;
+}
+
+/* Colors */
+@light: #fff;
+@dark: #000;
+@grey: #232320;
+@btn-color: #94ca2d;
+@price: #b61919;
+
+/* Basic settings */
+
+html {
+	font-size: 10px;
+}
+
+.body {
+	.med();
+}
+
+button, input, a, textarea {
+	&:focus {
+		outline: none;
+	}
+}
+
+a {
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+/* Button */
+.button {
+	padding: 1rem 2.5rem;	
+	font-size: 1.8rem;	
+	border-radius: 5px;
+	color: @light;
+	background-color: @btn-color;
+	text-transform: uppercase;
+	.bold();
+
+	&:onclick {
+		border: none;
+		outline: none;
+	}
+}
+
+
+/* Header */
+
+main {
+	background: @grey url(../img/main-bg.jpg) center no-repeat;
+	background-size: cover;
+
+	.main-backround {
+		background-color: rgba(0, 0, 0, 0.6);
+	}
+
+	.header {
+		padding: 1rem 0;
+		background-color: rgba(0, 0, 0, 0.62);
+
+		.logo {
+
+			&-block {
+				display: flex;
+			}
+
+			&-img {
+				align-self: center;
+			}
+
+			&-text {
+				margin-left: 1.5rem;
+				font-size: 2rem;
+				color: @light;
+			}
+		}
+	
+
+
+		.contacts {
+			text-align: right;
+			
+
+			.phone-number {
+				margin-bottom: 0;
+				color: @light;
+				font-size: 2.3rem;
+				.bold();
+			}
+
+			.header-btn {
+				background: none;
+				border: none;
+				color: @btn-color;
+				font-size: 2.3rem;
+			}
+		}
+	}
+
+	.main {
+
+				
+
+		&-content {
+
+			padding: 10rem 0 2rem 0;
+			
+			h1 {
+				font-size: 4rem;
+				color: @light;
+			}
+		}
+
+		&-subtitle {
+			margin: 1.5rem 0 3rem 0;	
+			font-size: 3rem;	
+			color: @light;
+		}
+
+		&-img {
+
+			&-left {
+				margin-top: 4.5rem;	
+			}
+
+			&-right {
+				position: absolute;
+				bottom: 0.8rem;	
+				right: 0;
+			}
+		}
+	}
+}
+
+.about-vrbox {
+	padding: 10rem 0 6.4rem 0;
+	background:  url(../img/about-vrbox/border-btm-bg.png) repeat-x bottom left, #f8f8f0;
+
+	&-title {
+		margin-bottom: 4.4rem;
+	}
+
+	&-text {
+		font-size: 1.7rem;
+	}
+
+	&-set {
+		margin: 3rem 0;
+
+		ul {
+			li {
+				font-size: 1.7rem;
+			}
+		}
+	}
+
+	&-complite {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&-title4 {
+		font-size: 1.8rem;
+		font-weight: bold;
+		.med();
+
+		&:last-child {
+			margin-top: auto;
+		}
+
+		strong {
+			display: inline-block;
+			margin: 0 auto;
+			font-size: 2rem;
+			color: @price;
+		}
+	}
+
+	&-img {
+		padding: 8rem 0;
+
+		img {
+			height: 29rem;
+		}
+
+		h5 {
+			font-size: 2.5rem;
+			text-align: right;
+			.med();
+		}
+
+		p {
+			font-size: 1.7rem;
+			text-align: right;
+		}
+	}
+}

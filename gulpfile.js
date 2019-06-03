@@ -20,6 +20,9 @@ var cleanCSS = require('gulp-clean-css');
 gulp.task('move-css',function(){
   return gulp.src(
       'src/less/*.css')
+  .pipe(autoprefixer({
+			browsers: ['last 2 version']
+		}))
   .pipe(cleanCSS())
   .pipe(gulp.dest('build/css'));
 });
@@ -40,6 +43,9 @@ gulp.task('sass', function(){
 gulp.task('less', function () {
   return gulp.src('src/less/**/*.less')
     .pipe(less())
+    .pipe(autoprefixer({
+			browsers: ['last 2 version']
+		}))
     .pipe(concat('style.css'))
     .pipe(cleanCSS())
     .pipe(gulp.dest('build/css'))
@@ -93,16 +99,9 @@ gulp.task('svg', function(){
 				pretty: true
 			}
 		}))
-		.pipe(cheerio({
-			run: function ($){
-				$('[fill]').removeAttr('fill');
-				$('[stroke]').removeAttr('stroke');
-				$('[style]').removeAttr('style');
-			},
-			parserOptions: {xmlMode: true}
-		}))
 		.pipe(replace('&gt:', '>'))
-		.pipe(gulp.dest('build/img'));
+		.pipe(gulp.dest('build/img'))
+		.pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('serve', function(){

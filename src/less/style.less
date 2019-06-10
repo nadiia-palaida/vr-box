@@ -179,22 +179,7 @@ a {
 	}
 }
 
-/* Header */
-
-main {
-	background: @grey url(../img/main-bg.jpg) center no-repeat;
-	background-size: cover;
-
-	.main-backround {
-		background-color: rgba(0, 0, 0, 0.6);
-	}
-
-	.header {
-		padding: 1rem 0;
-		height: 8.6rem;
-		background-color: rgba(0, 0, 0, 0.62);
-
-		.logo {
+.logo {
 
 			&-block {
 				display: flex;
@@ -236,11 +221,23 @@ main {
 				font-size: 2.3rem;
 			}
 		}
+/* Header */
+
+main {
+	background: @grey url(../img/main-bg.jpg) center no-repeat;
+	background-size: cover;
+
+	.main-backround {
+		background-color: rgba(0, 0, 0, 0.6);
+	}
+
+	.header {
+		padding: 1rem 0;
+		height: 8.6rem;
+		background-color: rgba(0, 0, 0, 0.62);
 	}
 
 	.main {
-
-
 
 		&-content {
 
@@ -442,6 +439,11 @@ main {
 .order {
 	background: @grey url(../img/order/order-bg.jpg) 50% 85%  no-repeat;
 	color: @light;
+
+	&-footer {
+		background: @grey url(../img/order/order-bg2.jpg) 55% 60%  no-repeat;
+		color: @light;
+	}
 
 	&-bg {
 		background-color: rgba(0, 0, 0, 0.76);
@@ -759,4 +761,117 @@ main {
 		display: block;
 		margin: 3.5rem auto 0 auto;		
 	}
+}
+
+.feedback {
+	position: relative;
+	padding: 10rem 0 9rem 0;
+	background: url(../img/border-btm-bg.png) bottom left repeat-x, @bg-light;
+
+	.title {
+		margin-bottom: 7rem;
+	}
+
+	&-icon {
+		position: absolute;
+		right: 0;
+		top: 15rem;
+		z-index: 2;
+	}
+
+	&-col {
+		padding: 0 0.6rem 0.6rem 0;
+
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+
+	&-column {
+		padding: 2.5rem 3rem 5.5rem 3rem;
+		margin-right: 0.6rem;
+		border: 1px solid @border-color;
+
+
+		.media {
+			display: flex;
+		}
+
+		.media-body {
+			align-self: center;
+		}
+	}
+
+	&-photo {
+		width: 13.1rem;
+		height: 13.1rem;
+		border-radius: 50%;
+	}
+
+	&-name {
+		margin-left: 3rem;
+		font-size: 1.8rem;
+		.med();
+	}
+
+	&-text {
+		margin-top: 2.5rem;
+		font-size: 1.7rem;
+	}
+}
+
+.our_work {
+	position: relative;
+	padding: 10rem 0 9rem 0;
+	background-color: @bg-lighter;
+	text-align: center;
+
+	&-diamond {
+		position: absolute;
+		left: -7rem;
+		top: 50rem;
+	}
+	
+	&-items {
+		margin-top: 8rem;
+	}
+
+	&-img {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		height: 13.3rem;
+	}
+	    
+	img {
+		position: absolute;
+		bottom: 0;
+	}
+
+	p {
+		margin-top: 1.3rem;
+		font-size: 1.7rem;
+	}
+}
+
+
+
+.questions {
+	padding: 6rem 0;
+	text-align: center;
+
+	a {
+		display: inline;
+		text-decoration: none;
+		text-align: center;
+		font-size: 1.8rem;
+		color: @dark;
+		border-bottom: 1px dotted #000;
+		.med();
+	}
+}
+
+footer {
+	padding: 1.5rem 0;
+	background-color: @dark;
 }

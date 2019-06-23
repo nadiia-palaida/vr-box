@@ -113,6 +113,8 @@ html {
 button, input, a, textarea {
 	&:focus {
 		outline: none;
+		box-shadow: none;
+		
 	}
 }
 
@@ -200,27 +202,40 @@ a {
 			}
 		}
 
+.contacts {
+	text-align: right;
+	
+
+	.phone-number {
+		margin-bottom: 0;
+		color: @light;
+		font-size: 2.3rem;
+		.bold();
+	}
+
+	.header-btn {
+		background: none;
+		border: none;
+		margin-top: -0.8rem;
+		color: @btn-color;
+		font-size: 2.3rem;
+	}
+}
 
 
-		.contacts {
-			text-align: right;
-			
+/* Slick */
 
-			.phone-number {
-				margin-bottom: 0;
-				color: @light;
-				font-size: 2.3rem;
-				.bold();
-			}
+.slick-next, .slick-prev {
+	i {
+		color: @border-color;
+		font-size: 4rem;
+	}
 
-			.header-btn {
-				background: none;
-				border: none;
-				margin-top: -0.8rem;
-				color: @btn-color;
-				font-size: 2.3rem;
-			}
-		}
+	&::before {
+		display: none;
+		
+	}
+}
 /* Header */
 
 main {
@@ -317,6 +332,10 @@ main {
 	&-img {
 		padding: 5rem 0;
 
+		&-double {
+			display: none;
+		}
+
 		img {
 			height: 30rem;
 		}
@@ -344,6 +363,8 @@ main {
 }
 
 .functions {
+	display: flex;
+	align-items: center;
 
 	&-col {
 
@@ -376,7 +397,7 @@ main {
 		&-diamond1 {
 			position: absolute;
 			left: 7rem;
-			bottom: 17.5rem;
+			bottom: 15.5rem;
 			z-index: 1;
 		}
 
@@ -409,13 +430,11 @@ main {
 			margin-bottom: 1.7rem;
 
 			&_sport {
-				margin-bottom: 15rem;
+				margin-bottom: 5rem;
 			}
-
-			
 		}
 
-		&-right {
+		&-car {
 			position: relative;
 			margin-top: -20rem;
 			margin-left: 10%;
@@ -433,6 +452,7 @@ main {
 
 	&-right {
 		padding-right: 13.5rem;
+
 	}
 }
 
@@ -470,7 +490,7 @@ main {
 			content: '';
 			display: block;
 			position: absolute;
-			left: 100%;
+			left: 99.9%;
 			top: 0;
 			bottom: 0;
 			width: 1.5rem;
@@ -482,6 +502,10 @@ main {
 
 	&-adventages {
 		display: flex;
+
+		&-2 {
+			display: none;
+		} 
 	}
 
 	&-adventage {
@@ -655,8 +679,6 @@ main {
 	}
 }
 
-
-
 .vr-real {
 	background: @grey url(../img/vr_real/vr-bg.jpg) center no-repeat;
 	background-size: cover;
@@ -757,7 +779,7 @@ main {
 		}
 	}
 
-	button {
+	.button-order {
 		display: block;
 		margin: 3.5rem auto 0 auto;		
 	}
@@ -855,7 +877,6 @@ main {
 }
 
 
-
 .questions {
 	padding: 6rem 0;
 	text-align: center;
@@ -874,4 +895,1693 @@ main {
 footer {
 	padding: 1.5rem 0;
 	background-color: @dark;
+}
+
+
+@media (max-width: 1199px) {
+	
+	.about-vrbox {
+
+		img {
+			height: 26rem;
+		}
+		
+		&-button {
+			font-size: 1.7rem;
+		}
+	}
+
+	.functions {
+
+		&-img {
+
+			&-left {
+
+				&_sport {
+					left: 0;
+					width: 100%;
+				}
+			}
+
+			&-right {
+				margin-bottom: 2rem;
+				width: 100%;
+			}
+
+			&-diamond4 {
+				right: 2rem;
+				height: 25%;
+			}
+		}
+
+		&-left {
+			padding-left: 0;
+		}
+
+		&-right {
+			padding-right: 0;
+		}
+	}
+
+	.compatibility {
+
+		.diamond {
+			width: 15%;
+		}
+
+		&-vrbox {
+			display: flex;
+			align-items: flex-end;
+		}
+
+		&-version {
+			img {
+				height: 22rem;
+				width: 11.5rem;
+			}
+		}
+
+		&-glasses {
+			img {
+				width: 90%;
+			}
+
+			p {
+				padding-top: 1rem;
+			}
+		}
+	}
+
+	.feedback {
+
+		&-icon {
+			width: 15%;
+		}
+	}
+}
+
+
+@media (max-width: 991px) {
+
+	main {
+
+		.contacts {
+			text-align: right;
+
+			.phone-number {
+				font-size: 2rem;
+			}
+
+			.header-btn {
+				font-size: 2rem;
+			}
+		}
+
+		.header {
+			height: 10rem;
+		}
+
+		.main {
+
+			&-content{
+				h1, h2 {
+					font-size: 3rem;
+				}
+			}
+
+			&-img {
+				text-align: right;
+				
+
+				&-left {
+					height: 75%;
+				}
+
+				&-right {
+					height: 100%;
+					bottom: 4rem;
+				}
+			}
+
+		}
+	}
+
+	.about-vrbox {
+		padding-top: 5rem;
+
+		h2 {
+			font-size: 3.3rem;
+			margin-bottom: 2rem;
+		}
+
+		&-text {
+			padding-right: 0;
+		}
+
+		&-complite {
+			margin-top: 3rem;
+
+			h4 {
+				text-align: center;
+			}
+
+			ul {
+				margin: 1rem auto;
+			}
+		}
+
+		&-img {
+			display: none;
+
+			&-double {
+				display: block;
+				margin: 0 auto;
+ 	 
+				img {
+					height: 29rem;
+				}
+
+				p, h5 {
+					text-align: left;
+					margin-left: 25rem;	
+				}
+
+				h5 {
+					font-size: 2.2rem;
+				}
+			}
+		}
+
+		&-button {
+			display: block;
+			margin: 0 auto;
+			font-size: 1.7rem;
+			height: 5rem;
+		}
+	}
+
+	.functions {
+		align-items: flex-start;
+
+		&:last-child {
+			margin-top: 3rem;	
+			align-items: center;
+		}
+
+		&-vrbox {
+			padding: 5rem 0 4.8rem 0;
+		}
+
+		&-img {
+
+			&-left {
+				width: 100%;
+
+				&_sport {
+					width: 110%;
+				}
+			}
+
+			&-right {
+				margin-bottom: 2rem;
+				width: 100%;
+
+				&_game {
+					width: 120%;
+				}
+			}
+
+			&-car {
+				width: 100%;
+				margin-top: -15rem;
+			}
+
+			&-girl {
+				width: 50%;
+			}
+
+			&-diamond1 {
+				bottom: 11rem;
+				left: 5rem;	
+			}
+
+			&-diamond2 {
+				height: 25%;
+			}
+
+			&-diamond3 {
+				height: 30%;
+			}
+
+			&-diamond4 {
+				right: 4rem;
+				height: 25%;
+			}
+		}
+
+		&-left {
+			padding-left: 0;
+		}
+
+		&-right {
+			padding-right: 0;
+		}
+	}
+
+	.order {
+
+		&-bg {
+			padding-top: 0rem;
+		}
+
+		&-block {
+			padding-top: 5rem;
+			margin: 0 auto;
+
+			h2 {
+				text-align: center;
+				font-size: 3.3rem;
+			}
+		}
+
+		&-adventages {
+			display: none;
+			
+			&-2 {
+				display: flex;
+				margin: 4rem auto 0 auto;
+				justify-content: center;
+			}
+		}
+
+		&-form {
+
+			form {
+				margin: 0 auto;
+				padding: 3rem 5rem;
+
+				h3 {
+					font-size: 2rem;
+				}
+
+				input {
+					font-size: 1.7rem;
+				}
+
+				button {
+					height: 5.4rem;
+					font-size: 1.8rem;
+					.med();
+				}
+			}
+		}
+	}
+
+	.how_work {
+		padding-top: 5rem;
+		padding-bottom: 3rem;
+		background: none;
+		
+		.title {
+			margin-bottom: 4rem;
+		}
+
+		&-column {
+
+			img {
+				width: 14.8rem;
+				height: 13.1rem;
+				object-fit: contain;
+				align-self: center;
+			}
+		}
+
+		&-text {
+			font-size: 1.7rem;
+		}
+	}
+
+	.compatibility {
+		padding-top: 4rem;
+		padding-bottom: 4rem;
+
+		&-vrbox {
+			flex-direction: column-reverse;
+			justify-content: center;
+		}
+
+		.diamond {
+			display: none;
+		}
+
+		h2 {
+			text-align: center;
+		}
+
+		&-glasses {
+			margin-top: 2rem;
+
+			img {
+				display: block;
+				margin: 0 auto;
+				width: 60%;
+			}
+
+			p {
+				margin-top: 2.5rem;	
+				padding: 0 3rem;
+				font-size: 2rem;
+			}
+		}
+
+		&-versions {
+			display: flex;
+			padding: 0;
+			justify-content: space-between;	
+		}
+
+		&-version {
+			margin-top: 3rem;
+
+			img {
+				display: block;
+				margin: 0 auto;
+			}
+		}
+	}
+
+	.apps {
+		padding-top: 5rem;
+
+		.slick-next, .slick-prev {
+			display: flex;
+			height: 100%;
+			align-items: middle;
+			justify-content: flex-end;
+
+			i {
+				color: @border-color;
+				font-size: 4rem;
+			}
+		}	
+
+
+		&-descriptions {
+			margin-top: 3rem;
+		}
+
+		&-description {
+
+			img {
+				display: block;
+				margin: 0 auto;
+				width: 50%;
+			}
+
+			h4 {
+				text-align: center;
+			}
+
+			p {
+				text-align: center;
+			}
+		}
+	}
+
+	.feedback {
+		padding-top: 5rem;	
+		padding-bottom: 5rem;	
+
+		&-icon {
+			display: none;
+		}
+
+		.slick-prev {
+
+				left: -3.5rem;
+			i {
+			}
+		}
+	}
+
+	.our_work {
+		padding-top: 5rem;
+		padding-bottom: 5rem;
+
+		&-diamond {
+			width: 12%;
+		}
+
+		&-items {
+			margin-top: 3rem;
+		}
+
+		&-item {
+			margin-bottom: 3rem;
+		}
+	}
+
+	.footer {
+		.logo-block {
+			display: flex;
+			justify-content: center;
+			margin-bottom: 2rem;
+		}
+		.contacts {
+			display: flex;
+			flex-direction: column-reverse;
+			text-align: center;
+			
+		}
+	}
+}
+
+@media (max-width: 767px) {
+
+	.button {
+		height: 5rem;
+		font-size: 1.5rem; 
+	}
+	
+	main {
+
+		.logo {
+
+			&-img {
+				height: 80%;	
+			}
+
+			&-block {
+				justify-content: center;
+			}
+		}
+
+		.contacts {
+			margin-top: 0.9rem;
+			text-align: center;
+			
+
+			.phone-number {
+				display: inline-block;
+				font-size: 2rem;
+				margin-right: 1rem;
+			}
+
+			.header-btn {
+				display: inline-block;
+				font-size: 2rem;
+			}
+		}
+
+		.header {
+			height: 10rem;
+		}
+
+		.main {
+
+			&-content{
+				padding-top: 6rem;
+				padding-bottom: 0;
+				h1, h2 {
+					font-size: 2.8rem;
+				}
+			}
+
+			&-img {
+				text-align: right;
+				
+
+				&-left {
+					height: 52.5%;
+				}
+
+				&-right {
+					height: 82.5%;
+					bottom: 8rem;
+				}
+			}
+
+		}
+	}
+
+	.about-vrbox {
+		h2 {
+			font-size: 2.8rem;	
+		}
+
+		&-text {
+			padding-right: 0;
+		}
+
+		&-complite {
+			margin-top: 3rem;
+
+			h4 {
+				text-align: left;
+			}
+
+			ul {
+				margin: 1rem;
+			}
+		}
+
+		&-img{
+
+			&-double {
+				margin: 0;
+
+				img {
+					height: 25rem;
+				}
+			}
+		}
+	}
+		
+	.functions {
+		display: flex;
+
+		&:last-child {
+			flex-direction: column-reverse;
+		}
+
+		&-vrbox {
+			padding-top: 2.5rem;
+		}
+
+		h5 {
+			font-size: 2rem;	
+			margin-bottom: 0.5rem;
+		}
+		
+		&-img {
+
+			&-left {
+				display: block;
+				margin: 0 auto;	
+				width: 70%;
+
+				&_sport {
+					display: block;
+					margin: 0 auto;
+					width: 80%;
+					margin-bottom: 2rem;
+				}
+			}
+
+			&-right {
+				width: 80%;
+
+				&_game {
+					display: block;
+					margin: 0 auto;
+					width: 90%;
+				}
+			}
+
+			&-car {
+				display: block;
+				margin: 0 auto;	
+				width: 80%;
+			}
+
+			&-girl {
+				display: none;
+			}
+
+			&-diamond1 {
+				display: none;
+			}
+
+			&-diamond2 {
+				display: none;
+			}
+
+			&-diamond3 {
+				display: none;
+			}
+
+			&-diamond4 {
+				display: none;
+			}
+
+		}
+
+		&-left, &-right {
+			margin-right: 2rem;
+
+			img {
+				margin: 0 2rem 0 2rem;
+				width: 9%;	
+			}
+		}
+
+	}
+
+	.order {
+
+		&-block {
+
+			h2 {
+				font-size: 2.8rem;
+			}
+		}
+
+		&-text {
+			width: 100%;
+		}
+	}
+
+	.how_work {
+
+		&-column {
+			margin-bottom: 2rem;
+		}
+
+		h2 {
+			font-size: 2.8rem;	
+
+			&:after {
+				width: 5rem;
+				height: 0.3rem;
+			}
+		}
+		.circle-border { 
+			width: 5rem;
+			height: 5rem;
+
+			&:before {
+				top: 1rem;
+				right: 1rem;
+				bottom: 1rem;
+				left: 1rem;
+			}
+
+			span {
+				font-size: 3rem;
+			}
+		}
+	}
+
+	.compatibility {
+
+		h2 {
+			font-size: 2.8rem;
+		}
+
+		&-glasses {
+
+			p {
+				margin-top: 2.5rem;	
+				padding: 0 3rem;
+				font-size: 1.8rem;
+			}
+		}
+
+
+		&-version {
+
+			img {
+				height: 20rem;
+				width: 10.5rem;
+			}
+
+			p {
+				font-size: 1.7rem;
+			}
+		}
+	}
+
+	.vr-real { 
+		
+		.opacity {
+			padding: 5rem 0;
+		}
+
+		h2 {
+			font-size: 2.8rem;
+		}
+
+		&-icon {
+			height: 8rem;
+			width: 8rem;
+		}
+
+		p {
+			font-size: 2rem;
+		}
+	}
+
+	.apps {
+		h2 {
+			font-size: 2.8rem;
+		}
+
+		.button-order {
+			margin-top: 2rem;
+		}
+	}
+
+	.feedback {
+
+		h2.title {
+			font-size: 2.8rem;
+			margin-bottom: 4rem;
+		}
+
+		&-column {
+
+			.media {
+
+				img {
+					height: 50%;
+					width: 90%;
+				}
+
+				h4 {
+					margin-left: 1.5rem;
+				}
+			}
+
+			p {
+					font-size: 1.7rem;
+				}
+		}
+	}
+
+	.our_work {
+
+		&-diamond {
+			display: none;
+		}
+
+		h2 {
+			font-size: 2.8rem;
+		}
+
+		&-items {
+			margin-top: 2rem;
+		}
+
+		&-item {
+			margin-bottom: 0rem;
+
+			img {
+				height: 11rem;
+			}
+
+			p {
+				font-size: 1.7rem;
+			}
+
+		}
+	}
+
+	.questions {
+		padding: 4rem 0px;
+
+		h2 {
+			font-size: 2.8rem;
+		}
+		a {
+			font-size: 1.7rem;
+		}
+	}
+
+	.footer {
+		.logo{
+
+			&-text {
+				font-size: 1.8rem;
+			}
+		}
+
+		.contacts {
+
+			.header-btn {
+				font-size: 2rem;
+			}
+
+			.phone-number {
+				font-size: 2rem;
+			}
+		}
+	}
+	
+}
+
+@media (max-width: 575px) {
+	.title {
+		font-size: 3.5rem;
+		.black();
+		font-weight: 900;
+
+		&-center {
+			text-align: center;
+			
+			&::after {
+				content: '';
+				display: block;
+				margin: 0 auto;
+				margin-top: 1.1rem;
+				width: 5.6rem;
+				height: 0.5rem;
+				border-bottom: 0.5rem solid @border-color;
+		}
+	}
+
+	&_light {
+		color:@light;
+	}
+}
+
+	.button {
+		height: 4rem;
+		font-size: 1.5rem; 
+	}
+	
+	main {
+
+		.logo {
+
+			&-block {
+				justify-content: center;
+			}
+
+			&-img {
+				height: 80%;	
+			}
+
+			&-text {
+				font-size: 1.6rem;
+				.med();
+			}
+		}
+
+		.contacts {
+			margin-top: 1.5rem;
+			text-align: center;
+			
+
+			.phone-number {
+				display: inline-block;
+				font-size: 1.8rem;
+				margin-right: 1rem;
+			}
+
+			.header-btn {
+				display: inline-block;
+				font-size: 1.8rem;
+				.med();
+			}
+		}
+
+		.header {
+			height: 12rem;
+			padding-bottom: 1.8rem;
+		}
+
+		.main {
+
+			&-content{
+				padding-top: 6rem;
+				padding-bottom: 0;
+
+				h1, h2 {
+					font-size: 2.2rem;
+				}
+
+				h2 {
+					margin-top: 0;
+				}
+			}
+
+			&-img {
+				text-align: right;
+				margin-top: 2rem;
+
+				&-left {
+					height: 40%;
+				}
+
+				&-right {
+					height: 75%;
+					bottom: 10rem;
+					left: 1rem;
+				}
+			}
+
+		}
+	}
+
+	.about-vrbox {
+		h2 {
+			font-size: 2.2rem;
+		}		
+
+		p {
+			font-size: 1.7rem;
+		}
+
+		&-img {
+
+			&-double {
+				margin: 0 auto;
+
+				p, h5 {
+					margin-left: 12rem;	
+				}
+
+				h5 {
+					font-size: 1.9rem;
+				}
+
+				img {
+					height: 20rem;
+				}
+			}
+		}
+
+		&-set {
+			ul {
+				li {
+					font-size: 1.6rem;
+				}
+			}
+		}
+
+		&-title4 {
+			font-size: 1.8rem;
+
+			span {
+				font-size: 1.9rem;
+			}
+
+			&_bottom {
+				font-size: 1.6rem;
+			}
+		}
+
+		&-button {
+			font-size: 1.3rem;
+			height: 4.3rem;
+		}
+	}
+
+	.functions {
+
+		&-vrbox {
+			padding: 3rem 0 3.5rem 0;
+		}
+
+		h5 {
+			font-size: 1.8rem;	
+		}
+
+		p {
+			font-size: 1.5rem;
+		}
+
+		&-img {
+
+			&-diamond1 {
+				display: none;
+			}
+
+			&-diamond2 {
+				display: none;
+			}
+		}
+
+		&-left {
+			img {
+				margin: 0 1.5rem 0 1.5rem;	
+			}
+		}
+
+		&-right {
+			img {
+				margin: 0 1.5rem 0 1.5rem;	
+			}
+		}
+	}
+
+	.order {
+
+		&-block {
+			padding-top: 4rem;
+
+			h2 {
+				font-size: 2.4rem;
+			}
+
+			p {
+				font-size: 1.6rem;
+			}
+		}
+
+		&-form {
+
+			form {
+				padding: 3rem 3rem;
+
+				h3 {
+					font-size: 2rem;
+				}
+
+				input {
+					font-size: 1.5rem;
+				}
+
+				button {
+					height: 4.5rem;
+					font-size: 1.5rem;
+					.med();
+				}
+			}
+		}
+
+		&-adventage {
+			p {
+				font-size: 1.4rem;
+			}
+		}
+	}
+
+	.how_work {
+
+		h2 {
+			font-size: 2.4rem;
+
+			&:after {
+				width: 3.5rem;
+				height: 0.2rem;
+			}
+		}
+
+		&-column {
+
+			img {
+				width: 12.8rem;
+				height: 12.1rem;
+				object-fit: contain;
+				align-self: center;
+			}
+		}
+
+		.circle-border { 
+
+			&:before {
+				top: 1.2rem;
+				right: 1.2rem;
+				bottom: 1.2rem;
+				left: 1.2rem;
+			}
+
+			span {
+				font-size: 2.2rem;
+			}
+		}
+	}
+
+	.compatibility {
+
+		h2 {
+			font-size: 2.4rem;
+		}
+
+		p {
+			font-size: 1.7rem;	
+		}
+
+		&-version {
+
+			img {
+				height: 18rem;
+				width: 9rem;
+			}
+
+			p {
+				font-size: 1.7rem;
+			}
+		}
+	}
+
+	.vr-real { 
+		h2 {
+			font-size: 2.4rem;
+		}
+
+		&-icon {
+			height: 7rem;
+			width: 7rem;
+		}
+
+		p {
+			font-size: 1.9rem;
+		}
+	}
+
+	.apps {
+		padding-bottom: 4.5rem;
+
+		h2 {
+			font-size: 2.4rem;
+
+			&:after {
+				width: 3.5rem;
+				height: 0.2rem;
+			}
+		}
+
+		&-icons {
+			padding-top: 2rem;
+			margin-bottom: 1rem;
+		}
+
+		&-icon {
+			width: 4.5rem;
+		}
+
+		.blaster {
+			width: 25%;
+			top: 70%;
+			right: 25%;
+		}
+
+		&-descriptions {
+			display: block;
+			margin: 0 auto;
+			width: 90%;
+		}
+
+		&-description {
+
+			img {
+				width: 50%;
+			}
+
+			h4 {
+				margin-top: 2rem;
+				font-size: 1.8rem;
+			}
+
+			p {
+				font-size: 1.7rem;
+			}
+		}
+	}
+
+	.feedback {
+		padding-top: 4rem;
+
+		h2.title {
+			font-size: 2.4rem;
+		}
+
+		&-slider {
+			margin: 0 auto;
+			width: 90%;
+		}
+
+		&-column {
+			padding: 2rem 2rem 4rem 2rem;
+
+			.media {
+
+				img {
+					height: 50%;
+					width: 80%;
+				}
+
+				h4 {
+					margin-left: 0;
+				}
+			}
+
+			p {
+					font-size: 1.7rem;
+				}
+		}
+	}
+
+	.our_work {
+		h2 {
+			font-size: 2.4rem;
+		}
+
+		&-item {
+			margin-bottom: 0rem;
+
+			img {
+				height: 10rem;
+			}
+
+			p {
+				font-size: 1.6rem;
+			}
+		}	
+	}
+
+	.questions {
+		padding: 3rem 0px;
+
+		h2 {
+			font-size: 2.4rem;
+		}
+		a {
+			font-size: 1.6rem;
+		}
+	}
+
+	.footer {
+		.logo {
+			&-img {
+				width: 8rem;
+			}
+
+			&-text {
+				font-size: 1.6rem;
+			}
+		}
+
+		.contacts {
+
+			.header-btn {
+				font-size: 1.7rem;
+			}
+
+			.phone-number {
+				font-size: 1.7rem;
+			}
+		}
+	}
+}
+
+
+@media (max-width: 429px) {
+	.button {
+		height: 3.8rem;
+		font-size: 1.1rem; 
+	}
+	
+	main {
+
+		.logo {
+
+			&-block {
+				justify-content: center;
+			}
+
+			&-img {
+				height: 50%;	
+			}
+
+			&-text {
+				font-size: 1.2rem;
+				.med();
+			}
+		}
+
+		.contacts {
+			margin-top: 1.5rem;
+			text-align: center;
+			
+
+			.phone-number {
+				display: inline-block;
+				font-size: 1.7rem;
+				margin-right: 1rem;
+			}
+
+			.header-btn {
+				display: inline-block;
+				font-size: 1.4rem;
+				.med();
+			}
+		}
+
+		.header {
+			height: 12rem;
+			padding-bottom: 1.8rem;
+		}
+
+		.main {
+
+			&-background {
+				padding-bottom: rem;
+			}
+
+			&-content{
+				padding-top: 6rem;
+				padding-bottom: 0;
+
+				h1, h2 {
+					font-size: 1.6rem;
+				}
+
+				h2 {
+					margin-top: 0;
+				}
+			}
+
+			&-img {
+				text-align: right;
+				
+
+				&-left {
+					height: 35%;
+				}
+
+				&-right {
+					height: 50%;
+					bottom: 13rem;
+					left: 3rem;
+				}
+			}
+
+		}
+	}
+
+	.about-vrbox {
+		h2 {
+			font-size: 2.2rem;
+		}		
+
+		p{
+			font-size: 1.3rem;
+		}
+
+		h4 {
+			font-size: 1.6rem;
+		}
+
+		&-set {
+			ul {
+				li {
+					font-size: 1.3rem;
+				}
+			}
+		}
+
+		&-img {
+
+			&-double {
+
+				p, h5 {
+					margin-left: 12rem;	
+				}
+
+				h5 {
+					font-size: 1.6rem;
+				}
+
+				img {
+					height: 17rem;
+				}
+			}
+
+		}
+
+		&-button {
+			display: block;
+			
+			margin: 0 auto;
+			padding: 0.4rem;
+			font-size: 1rem;
+			height: 4.2rem;
+		}
+	}
+
+	.functions {
+
+		&-vrbox {
+			padding: 3rem 0 3.5rem 0;
+		}
+
+		h5 {
+			font-size: 1.6rem;	
+		}
+
+		p {
+			font-size: 1.3rem;
+		}
+	}
+
+	.order {
+
+		&-block {
+			h2 {
+				font-size: 2rem;
+			}
+
+			p {
+				font-size: 1.2rem;
+			}
+		}
+
+		&-text {
+			margin-bottom: 2rem;
+		}
+
+		&-form {
+
+			form {
+				padding: 2rem 4rem;
+
+				h3 {
+					font-size: 1.3rem;
+				}
+
+				input {
+					padding: 0 1.5rem;
+					height: 4rem;
+					font-size: 1.2rem;
+				}
+
+				button {
+					padding: 0 2.5rem;
+					height: 3rem;
+					font-size: 1rem;
+					.med();
+				}
+
+				p {
+					font-size: 1.2rem;
+				}
+			}
+		}
+
+		&-adventage {
+
+			&:last-child {
+
+				margin-left: 0.5rem;
+			}
+
+			p {
+				font-size: 1rem;
+			}
+		}
+	}
+
+	.how_work {
+		padding-bottom: 2rem;
+
+		h2 {
+			font-size: 2rem;	
+		}
+
+		p {
+			font-size: 1.3rem;
+		}
+	}
+
+	.compatibility {
+
+		h2 {
+			font-size: 2rem;
+		}
+
+		p {
+			text-align: center;
+			font-size: 1.5rem;	
+		}
+
+		&-version {
+
+			img {
+				height: 14rem;
+				width: 7.5rem;
+			}
+
+			p {
+				font-size: 1.6rem;
+			}
+		}
+	}
+
+	.vr-real { 
+
+		.opacity {
+			padding: 3.5rem 0;
+		}
+
+		h2 {
+			font-size: 2rem;
+		}
+
+		&-icon {
+			height: 6rem;
+			width: 6rem;
+
+			img {
+				width: 70%;
+			}
+		}
+
+		p {
+			font-size: 1.6rem;
+		}
+	}
+
+	.apps {
+		padding-top: 3rem;
+
+		h2 {
+			font-size: 2rem;
+		}
+
+		&-icon {
+			width: 3.5rem;
+		}
+
+		.slick-next, .slick-prev {
+			margin: 0;
+			width: 2.5rem;
+			padding-right: 0.5rem;
+			z-index: 1000;
+			
+			i {
+				font-size: 2.5rem;
+			}
+		}
+
+
+		.slick-prev {
+			
+		}
+
+		&-descriptions {
+		}
+
+		&-description { 
+			
+			h4 {
+				font-size: 1.8rem;
+			}
+
+			p {
+				font-size: 1.3rem;
+			}
+		}
+
+		.button-order {
+			margin-top: 1rem;
+			height: 4rem;
+		}
+	}
+
+	.feedback {
+		padding-top: 3rem;
+
+		.slick-prev, .slick-next {
+			 i {
+			 	font-size: 2.5rem;
+			 }
+		}
+
+		h2.title {
+			font-size: 2rem;
+			margin-bottom: 3rem;
+		}
+
+		&-slider {
+			width: 80%;
+		}
+
+		&-column {
+			padding: 1rem 1rem 2rem 1rem;
+
+			.media {
+
+				img {
+					height: 8rem;
+					width: 8rem;
+					margin-right: 0;
+				}
+
+				h4 {
+					font-size: 1.6rem;
+					margin-left: 1rem;
+				}
+			}
+
+			p {
+				font-size: 1.3rem;
+			}
+		}
+	}
+
+	.our_work {
+		h2 {
+			font-size: 2rem;
+		}
+
+		&-item {
+
+			img {
+				height: 9rem;
+			}
+
+			p {
+				font-size: 1.3rem;
+			}
+		}	
+	}
+
+	.questions {
+		padding: 2rem 0px;
+
+		h2 {
+			font-size: 2rem;
+		}
+		a {
+			font-size: 1.3rem;
+		}
+	}
+
+	.footer {
+		.logo {
+			&-img {
+				width: 5rem;
+			}
+
+			&-text {
+				font-size: 1.3rem;
+			}
+		}
+
+		.contacts {
+
+			.header-btn {
+				font-size: 1.4rem;
+				margin-bottom: 1rem;
+				margin-top: 0;
+			}
+
+			.phone-number {
+				font-size: 1.4rem;
+			}
+		}
+	}
 }

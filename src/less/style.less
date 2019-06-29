@@ -156,7 +156,7 @@ a {
 		font-size: 2.2rem;
 	}
 
-	input {
+	input, select {
 		margin-top: 0.7rem;
 		padding: 0 2.4rem;
 		height: 5rem;
@@ -171,6 +171,25 @@ a {
 		}
 	}
 
+	&-select {
+		position: relative;
+	
+		i {
+			position: absolute;
+			font-size: 1.8rem;
+			right: 10%;	
+			top: 45%;
+			z-index: 1;
+		}
+	}
+
+	select {
+		appearance: none;
+		background: @dark;
+		padding: 0 4.9rem 0 2.4rem;
+		z-index: 1000;
+	}
+
 	button {
 		margin-top: 1rem;
 	}
@@ -178,6 +197,61 @@ a {
 	p{
 		margin-top: 1.5rem;
 		font-size: 1.5rem;
+	}
+}
+
+.popup {
+	position: fixed;
+	display: none;
+	left: 0;	
+	right: 0;	
+	bottom: 0;	
+	top: 0;	
+	width: 100%;	
+	height: 100%;	
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 1000;
+
+	.form {
+		position: fixed;
+		left: 50%;
+		top: 15%;
+		transform: translateX(-50%);
+
+		.cross {
+			display: flex;
+			position: absolute;
+			top: -1.5rem;
+			right: -1.7rem;
+			background: @dark;
+			border: 0.4rem solid @border-color;
+			border-radius: 50%;
+
+			a {
+				margin: 0.6rem 1rem;
+				font-size: 2.5rem;
+				line-height: 2.5rem;
+				color: @border-color;
+				font-weight: 900;
+			}
+
+		}
+
+		&-select {
+			width: 25rem;
+			margin: 0 auto;
+
+			.order-vrbox {
+				width: 100%;
+			}
+		}
+	} 
+
+	.video_vrbox {
+			position: fixed;
+			left: 50%;
+			top: 15%;
+			transform: translateX(-50%);
 	}
 }
 
@@ -204,7 +278,6 @@ a {
 
 .contacts {
 	text-align: right;
-	
 
 	.phone-number {
 		margin-bottom: 0;
@@ -897,6 +970,51 @@ footer {
 	background-color: @dark;
 }
 
+.main-thanks {
+	height: 100vh;
+
+	.main-backround {
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.contacts {
+
+		.phone-number {
+			line-height: 6rem;
+		}
+	}
+
+	.content {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		text-align: center;
+
+		&-row {
+
+		}
+
+		h2 {
+			font-size: 3.9rem;
+			color: @light;
+			.bold();
+		}
+
+		p {
+			font-size: 2.5rem;
+			color: @light;
+			.med();
+		}
+
+		.button {
+			padding: 0 3.5rem;	
+			line-height: 6.2rem;	
+			color: @light;
+		}
+	}
+}
 
 @media (max-width: 1199px) {
 	
@@ -1022,9 +1140,10 @@ footer {
 					bottom: 4rem;
 				}
 			}
-
 		}
 	}
+
+	
 
 	.about-vrbox {
 		padding-top: 5rem;
@@ -1354,6 +1473,54 @@ footer {
 			
 		}
 	}
+
+	.popup {
+		background-color: rgba(0, 0, 0, 0.9);
+		form {
+				margin: 0 auto;
+				padding: 3rem 5rem;
+
+				h3 {
+					font-size: 2rem;
+				}
+
+				input {
+					font-size: 1.7rem;
+				}
+
+				button {
+					height: 5.4rem;
+					font-size: 1.8rem;
+					.med();
+				}
+			}
+	}
+
+	.main-thanks {
+
+		.logo {
+
+			&-text {
+				font-size: 1.8rem;	
+			}
+		}
+
+		.content {
+
+			h2 {
+				font-size: 3.5rem;	
+			}
+
+			p{
+				font-size: 2.2rem;
+			}
+
+			.button {
+				height: 6rem;	
+				line-height: 6rem;	
+			}
+		}
+	}
 }
 
 @media (max-width: 767px) {
@@ -1423,6 +1590,8 @@ footer {
 
 		}
 	}
+
+
 
 	.about-vrbox {
 		h2 {
@@ -1723,6 +1892,90 @@ footer {
 
 			.phone-number {
 				font-size: 2rem;
+			}
+		}
+	}
+
+	.popup {
+		form {
+				padding: 3rem 2rem;
+
+				input, select {
+					font-size: 1.6rem;
+					padding: 0 2rem;
+				}
+
+				select {
+					padding: 0 3rem;
+				}
+
+				button {
+					padding: 0 3.8rem;	
+					height: 4.8rem;
+					font-size: 1.5rem;
+				}
+
+				p {
+					font-size: 1.3rem;
+				}
+			}
+
+			.form {
+
+				.cross {
+					a {
+						margin: 0.5rem 0.85rem;
+						font-size: 2rem;
+						line-height: 2rem;
+					}
+				}
+
+				&-select {
+					width: 22rem;
+
+					.order-vrbox {
+						padding: 0 2.5rem;	
+					}
+
+					i {
+						right: 7%;	
+						font-size: 1.5rem;	
+					}
+				}
+			}
+	}
+
+	.main-thanks {
+
+		.logo {
+
+			&-text {
+				font-size: 1.7rem;
+			}
+		}
+
+		.contacts {
+			margin-top: 1.5rem;		
+
+			.phone-number {
+				font-size: 1.8rem;	
+				line-height: 0;	
+			}
+		}
+
+		.content {
+
+			h2 {
+				font-size: 3rem;	
+			}
+
+			p{
+				font-size: 2rem;
+			}
+
+			.button {
+				height: 5rem;	
+				line-height: 5rem;	
 			}
 		}
 	}
@@ -2175,6 +2428,83 @@ footer {
 			}
 		}
 	}
+
+	.popup {
+		form {
+			width: 60%;
+			padding: 3rem 2rem;
+
+
+			h3 {
+				font-size: 1.6rem;
+			}
+
+			input, select {
+				height: 4rem;
+				font-size: 1.3rem;
+			}
+
+			button {
+				padding: 0 3.3rem;	
+				height: 4rem;
+				font-size: 1.3rem;
+				.med();
+			}
+
+			p {
+				font-size: 1.2rem;
+			}
+		}
+
+		.form {
+			.cross {
+				top: -1.4rem;
+
+				a {
+					margin: 0.45rem 0.8rem;
+					font-size: 1.8rem;
+					line-height: 1.8rem;
+				}
+			}
+
+			&-select {
+					width: 19.2rem;
+
+					.order-vrbox {
+						padding: 0 2.5rem;	
+					}
+
+					i {
+						right: 7%;	
+						font-size: 1.5rem;	
+					}
+				}
+		}
+	}
+
+	.main-thanks {
+
+		.logo {
+			&-text {
+				font-size: 1.5rem;	
+			}
+		}
+		.content {
+
+			h2 {
+				font-size: 2.7rem;	
+			}
+
+			p{
+				font-size: 1.7rem;
+			}
+
+			.button {
+				height: 4.5rem;	
+				line-height: 4.5rem;	
+			}
+		}
+	}
 }
 
 
@@ -2581,6 +2911,81 @@ footer {
 
 			.phone-number {
 				font-size: 1.4rem;
+			}
+		}
+	}
+
+	.popup {
+		form {
+			padding: 3rem 2rem;
+			width: 75%;
+
+			h3 {
+				font-size: 1.4rem;
+			}
+
+			input {
+				height: 4rem;
+				font-size: 1.3rem;
+			}
+
+			button {
+				padding: 0 3.7rem;
+				height: 4rem;
+				font-size: 1.2rem;
+				.med();
+			}
+
+			p {
+				font-size: 1.2rem;
+			}
+		}
+
+		.form {
+
+			.cross {
+				top: -1.1rem;
+				right: -1.2rem;
+				
+				a {
+					margin: 0.2rem 0.55rem;
+					font-size: 1.8rem;
+					line-height: 1.8rem;
+				}
+			}
+		}
+	}
+
+	.main-thanks {
+
+		.logo {
+
+			&-text {
+				font-size: 1.2rem;	
+			}
+		}
+		
+		.contacts {
+			margin-top: 0.5rem;	
+			
+			.phone-number {
+				font-size: 1.5rem;	
+			}
+		}
+
+		.content {
+
+			h2 {
+				font-size: 2.4rem;	
+			}
+
+			p{
+				font-size: 1.5rem;
+			}
+
+			.button {
+				height: 4rem;	
+				line-height: 4rem;	
 			}
 		}
 	}

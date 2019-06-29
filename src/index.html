@@ -12,7 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="css/slick.css"/>
 	<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
 	<link rel="stylesheet" href="css/animate.css">
-	<script src="https://kit.fontawesome.com/bed7c0829b.js"></script>		
+	<link rel="stylesheet" href="css/all.css">
 </head>
 
 <body>
@@ -24,10 +24,12 @@
 					<div class="row">
 
 						<div class="col-lg-6 col-md-6 col-sm-12 col-12">
-							<div class="logo-block">
-								<img src="img/logo.png" alt="логотип VR II" class="logo-img">
-								<p class="logo-text">Производство и продажа VR очков. <br> Доставка по всей России. </p>
-							</div>
+							<a href="thanks.html" target="_blank">
+								<div class="logo-block">
+									<img src="img/logo.png" alt="логотип VR II" class="logo-img">
+									<p class="logo-text">Производство и продажа VR очков. <br> Доставка по всей России. </p>
+								</div>
+							</a>
 						</div>
 
 						<div class="col-lg-6 col-md-6 col-sm-12 col-12">
@@ -45,13 +47,13 @@
 
 					<h1>Очки виртуальной реальности <br> VR Box II от производителя за 2390 р!</h1>
 					<h2 class="main-subtitle">Бесплатная доставка по Москве! </h2>
-					<button class="btn button">Заказать vr box 2</button>
+					<button class="btn button btn-order_vrbox">Заказать vr box 2</button>
 					<div class="row">
-						<div class="col-lg-6 col-md-6 col-sm-6 col-6 animated fadeInLeft slower">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-6 wow fadeInLeft slower">
 							<img class="main-img-left" src="img/main/photo1.png" alt="">
 						</div>
 
-						<div class="col-lg-6 col-md-6 col-sm-6 col-6 animated fadeInUp slower">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-6 wow fadeInUp slower">
 							<img src="img/main/photo3.png" alt="" class="main-img-right">
 						</div>
 
@@ -102,7 +104,7 @@
 						
 					<div class="col-lg-5 col-md-12 col-sm-12">
 						<div class="about-vrbox-img">
-							<img class="animated bounceInRight " src="img/about-vrbox/set1.png" alt="set-vrbox">
+							<img class="wow bounceInRight" data-wow-duration="2s" src="img/about-vrbox/set1.png" alt="set-vrbox">
 							<h5>Bluetooth-пульт</h5>
 							<p>для дистанционного <br>управления очками</p>
 						</div>
@@ -165,11 +167,11 @@
 					</div>
 					<div class="col-lg-6 col-md-12">
 						
-						<div class="order-form">
+						<div class="order-form wow fadeIn" data-wow-duration="5s">
 							<form action="" class="form">
 								<h3>Введите ваши данные и нажмите заказать</h3>
 								<input type="text" placeholder="Введите имя" >
-								<input type="text" placeholder="Введите телефон">
+								<input class="phone" type="text" placeholder="Введите телефон">
 								<button class="btn button">Заказать vr box 2</button>
 								<p>Перезвоним в течение 10 минут</p>
 							</form>
@@ -227,28 +229,28 @@
 		<div class="container">
 			<h2 class=" title title-center">Как это работает</h2>
 			<div class="row">
-				<div class="col-lg-3 col-md-3 col-sm-6 col-6 how_work-column">
+				<div class="col-lg-3 col-md-3 col-sm-6 col-6 how_work-column wow fadeInDown" data-wow-delay="">
 					<img src="img/how_work/phone.png" alt="">
 					<div class="circle-border">
 						<span>1</span>
 					</div>
 					<p class="how_work-text">Скачай на смартфон приложения, игры, фильмы. </p>
 				</div>
-				<div class="col-lg-3 col-md-3 col-sm-6 col-6 how_work-column">
+				<div class="col-lg-3 col-md-3 col-sm-6 col-6 how_work-column wow fadeInDown" data-wow-delay="0.6s">
 					<img src="img/how_work/watch.png" alt="">
 					<div class="circle-border">
 						<span>2</span>
 					</div>
 					<p class="how_work-text">Вставь смартфон в очки виртуальной реальности. </p>
 				</div>
-				<div class="col-lg-3 col-md-3 col-sm-6 col-6 how_work-column">
+				<div class="col-lg-3 col-md-3 col-sm-6 col-6 how_work-column wow fadeInDown" data-wow-delay="1.2s">
 					<img src="img/how_work/glass.png" alt="">
 					<div class="circle-border">
 						<span>3</span>
 					</div>
 					<p class="how_work-text">Наслаждайся абсолютно непередаваемыми эмоциями. </p>
 				</div>
-				<div class="col-lg-3 col-md-3 col-sm-6 col-6 how_work-column">
+				<div class="col-lg-3 col-md-3 col-sm-6 col-6 how_work-column wow fadeInDown" data-wow-delay="1.8s">
 					<img src="img/how_work/control_desk.png" alt="">
 					<div class="circle-border">
 						<span>4</span>
@@ -300,12 +302,12 @@
 		<div class="opacity">
 			<div class="container">
 				<h2 class="title">Виртуальная реальность <br>в очках vr box</h2>
-				<a href="#">
+				<a class="play_video-vrbox" href=".video_vrbox">
 					<div class="vr-real-icon">
 						<img src="img/vr_real/play_market.png" alt="play market">
 					</div>
 				</a>
-				<a href="#"><p>Смотреть видео</p></a>
+				<a class="play_video-vrbox" href=".video_vrbox"><p>Смотреть видео</p></a>
 				<div class="container"></div>
 			</div>
 	</section>
@@ -470,11 +472,11 @@
 							</div>
 						</div>
 						<div class="col-lg-6">
-							<div class="order-form">
+							<div class="order-form wow fadeIn" data-wow-duration="5s">
 								<form action="" class="form">
 									<h3>Введите ваши данные и нажмите заказать</h3>
 									<input type="text" placeholder="Введите имя" >
-									<input type="text" placeholder="Введите телефон">
+									<input  class="phone" type="text" placeholder="Введите телефон">
 									<button class="btn button">Заказать vr box 2</button>
 									<p>Перезвоним в течение 10 минут</p>
 								</form>
@@ -509,29 +511,145 @@
 					<div class="row">
 
 						<div class="col-lg-6">
-							<div class="logo-block">
-								<img src="img/logo.png" alt="логотип VR II" class="logo-img">
-								<p class="logo-text">Производство и продажа VR очков. <br> Доставка по всей России. </p>
-							</div>
+							<a href="index.html">
+								<div class="logo-block">
+									<img src="img/logo.png" alt="логотип VR II" class="logo-img">
+									<p class="logo-text">Производство и продажа VR очков. <br> Доставка по всей России. </p>
+								</div>
+							</a>
 						</div>
 
 						<div class="col-lg-6">
 							<div class="contacts">
-								<p class="phone-number">+79104551703</p>
-								<button class="header-btn footer-btn">Заказать звонок</button>
+								<p class="phone-number ">+79104551703</p>
+								<button class="header-btn footer-btn wow tada" data-wow-iteration="infinite"> Заказать звонок</button>
 							</div>
 						</div>
 					</div>
 				</div>
 		</footer>
+
+		<div class="popup popup-order_phone">
+				<form action="" class="form ">
+					<div class="cross">
+						<a href="#">
+							<i class="fas fa-times"></i>
+						</a>
+					</div>
+					<h3>Введите ваши данные и нажмите заказать звонок </h3>
+					<input type="text" placeholder="Введите имя" >
+					<input class="phone" type="text" placeholder="Введите телефон">
+					<button class="btn button">Заказать звонок</button>
+					<p>Перезвоним в течение 10 минут</p>
+				</form>
+		</div>
+		<div class="popup popup-answer">
+				<form action="" class="form ">
+					<div class="cross">
+						<a href="#">
+							<i class="fas fa-times"></i>
+						</a>
+					</div>
+					<h3>Оставьте заявку мы свяжемся с вами и ответим на все вопросы</h3>
+					<input type="text" placeholder="Введите имя" >
+					<input class="phone" type="text" placeholder="Введите телефон">
+					<button class="btn button">Оставить заявку</button>
+					<p>Перезвоним в течение 10 минут</p>
+				</form>
+		</div>
+		<div class="popup popup-order">
+				<form action="" class="form ">
+					<div class="cross">
+						<a href="#">
+							<i class="fas fa-times"></i>
+						</a>
+					</div>
+					<h3>Введите ваши данные и нажмите заказать</h3>
+					<input type="text" placeholder="Введите имя" >
+					<input class="phone" type="text" placeholder="Введите телефон">
+					<div class="form-select">
+						<select name="order-vrbox">
+							<option value="Bluetooch-pult">С Bluetooch пультом</option>
+							<option value="">Без Bluetooch пульта</option>
+						</select>
+						<i class="fas fa-chevron-down"></i>
+					</div>
+					<button class="btn button">Оставить заявку</button>
+					<p>Перезвоним в течение 10 минут</p>
+				</form>
+		</div>
+		<div class="popup popup-order_vrbox">
+				<form action="" class="form ">
+					<div class="cross">
+						<a href="#">
+							<i class="fas fa-times"></i>
+						</a>
+					</div>
+					<h3>Введите ваши данные и нажмите заказать</h3>
+					<input type="text" placeholder="Введите имя" >
+					<input class="phone" type="text" placeholder="Введите телефон">
+					<button class="btn button">Заказать vr box 2</button>
+					<p>Перезвоним в течение 10 минут</p>
+				</form>
+		</div>
+
+		<div class=" popup video">
+			<div class="video_vrbox">
+				<iframe  width="700" height="400" src="https://www.youtube.com/embed/NYF61cFGvJA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</div>
 		<!-- Bootstrap core JavaScript ================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="js/jquery-3.4.1.js"></script>
 		<script src="js/bootstrap.js"></script>
 		<script type="text/javascript" src="js/slick.js"></script>
+		<script src="js/wow.min.js"></script>
+		<script src="js/jquery.mask.js"></script>
+
+		<script>
+			jQuery(function($){
+			   $(".phone").mask("+7(999) 999-99-99");
+			});
+		</script>
+
+		<script>
+              new WOW().init();
+        </script>
 
 		<script>
 			$(document).ready(function(){
+				$('.header-btn').on('click', function(event) {
+					event.preventDefault();
+					/* Act on the event */
+					$('.popup-order_phone').fadeIn();	
+				});
+
+				$('.btn-order_vrbox, .button-order').on('click', function(event) {
+					event.preventDefault();
+					/* Act on the event */
+					$('.popup-order_vrbox').fadeIn();	
+				});
+
+				$('.about-vrbox-button').on('click', function(event) {
+					event.preventDefault();
+					/* Act on the event */
+					$('.popup-order').fadeIn();	
+				});
+
+				$('.play_video-vrbox').on('click', function(event) {
+					event.preventDefault();
+					/* Act on the event */
+					$('.video').fadeIn();	
+				});
+
+
+				$('.cross').on('click', function(event) {
+					event.preventDefault();
+					/* Act on the event */
+					$('.popup').fadeOut();
+				});
+
+
 				$('.apps-descriptions').slick({
 					infinite: true,
 					slidesToShow: 3,

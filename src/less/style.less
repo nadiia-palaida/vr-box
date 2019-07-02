@@ -157,6 +157,7 @@ a {
 	}
 
 	input, select {
+		width: 100%;
 		margin-top: 0.7rem;
 		padding: 0 2.4rem;
 		height: 5rem;
@@ -172,7 +173,13 @@ a {
 	}
 
 	&-select {
+		width: 100%;
 		position: relative;
+		margin: 0 auto;
+
+		.order-vrbox {
+			width: 100%;
+		}
 	
 		i {
 			position: absolute;
@@ -184,6 +191,7 @@ a {
 	}
 
 	select {
+		padding-left: 2rem;
 		appearance: none;
 		background: @dark;
 		padding: 0 4.9rem 0 2.4rem;
@@ -191,6 +199,7 @@ a {
 	}
 
 	button {
+		width: 100%;
 		margin-top: 1rem;
 	}
 
@@ -237,14 +246,6 @@ a {
 
 		}
 
-		&-select {
-			width: 25rem;
-			margin: 0 auto;
-
-			.order-vrbox {
-				width: 100%;
-			}
-		}
 	} 
 
 	.video_vrbox {
@@ -257,24 +258,24 @@ a {
 
 .logo {
 
-			&-block {
-				display: flex;
-				height: 100%;
-			}
+	&-block {
+		display: flex;
+		height: 100%;
+	}
 
-			&-img {
-				align-self: center;
-			}
+	&-img {
+		align-self: center;
+	}
 
-			&-text {
-				margin-left: 1.5rem;
-				align-self: center;
-				margin-bottom: 0;
-				line-height: 2.2rem;
-				font-size: 2rem;
-				color: @light;
-			}
-		}
+	&-text {
+		margin-left: 1.5rem;
+		align-self: center;
+		margin-bottom: 0;
+		line-height: 2.2rem;
+		font-size: 2rem;
+		color: @light;
+	}
+}
 
 .contacts {
 	text-align: right;
@@ -471,25 +472,28 @@ main {
 			position: absolute;
 			left: 7rem;
 			bottom: 15.5rem;
-			z-index: 1;
+			z-index: 0;
 		}
 
 		&-diamond2 {
 			position: absolute;
 			top: 0;
 			right: 0px;
+			z-index: 0;
 		}
 
 		&-diamond3 {
 			position: absolute;
 			bottom: 14rem;
 			left: 3rem;
+			z-index: 0;
 		}
 
 		&-diamond4 {
 			position: absolute;
 			bottom: 0;
 			right: 8rem;
+			z-index: 0;
 		}
 
 		&-girl {
@@ -1485,6 +1489,7 @@ footer {
 				}
 
 				input {
+					width: 100%;
 					font-size: 1.7rem;
 				}
 
@@ -1591,7 +1596,11 @@ footer {
 		}
 	}
 
-
+	.animated {
+		transition-property: none;
+		transform: none;
+		animation: none; 
+	}
 
 	.about-vrbox {
 		h2 {
@@ -1898,7 +1907,7 @@ footer {
 
 	.popup {
 		form {
-				padding: 3rem 2rem;
+				padding: 3rem;
 
 				input, select {
 					font-size: 1.6rem;
@@ -1906,7 +1915,12 @@ footer {
 				}
 
 				select {
-					padding: 0 3rem;
+					padding: 0 2rem;
+					outline: none;
+
+					&:onclick {
+						outline: none;	
+					}
 				}
 
 				button {
@@ -1931,7 +1945,6 @@ footer {
 				}
 
 				&-select {
-					width: 22rem;
 
 					.order-vrbox {
 						padding: 0 2.5rem;	
@@ -2432,7 +2445,7 @@ footer {
 	.popup {
 		form {
 			width: 60%;
-			padding: 3rem 2rem;
+			padding: 3rem;
 
 
 			h3 {
@@ -2467,15 +2480,14 @@ footer {
 				}
 			}
 
+
 			&-select {
-					width: 19.2rem;
 
 					.order-vrbox {
 						padding: 0 2.5rem;	
 					}
 
 					i {
-						right: 7%;	
 						font-size: 1.5rem;	
 					}
 				}
@@ -2676,6 +2688,7 @@ footer {
 		&-form {
 
 			form {
+				width: 90%;
 				padding: 2rem 4rem;
 
 				h3 {
@@ -2683,13 +2696,14 @@ footer {
 				}
 
 				input {
-					padding: 0 1.5rem;
+					padding: 0 1rem;
 					height: 4rem;
 					font-size: 1.2rem;
 				}
 
 				button {
-					padding: 0 2.5rem;
+					width: 100%;
+					padding: 0rem;
 					height: 3rem;
 					font-size: 1rem;
 					.med();
@@ -2917,7 +2931,7 @@ footer {
 
 	.popup {
 		form {
-			padding: 3rem 2rem;
+			padding: 3rem;
 			width: 75%;
 
 			h3 {
@@ -2938,6 +2952,10 @@ footer {
 
 			p {
 				font-size: 1.2rem;
+			}
+
+			select {
+				padding-left: 1.5rem;
 			}
 		}
 

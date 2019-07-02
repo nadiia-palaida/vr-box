@@ -10,12 +10,12 @@ const pngquant = require ('imagemin-pngquant');
 const run = require ('run-sequence');
 const del = require ('del');
 const svgmin = require ('gulp-svgmin');
-const cheerio = require ('gulp-cheerio');
 const replace = require ('gulp-replace');
 var less = require('gulp-less');
 var path = require('path');
 var concat = require('gulp-concat');
 var cleanCSS = require('gulp-clean-css');
+var uglify = require('gulp-uglify');
 
 gulp.task('move-css',function(){
   return gulp.src(
@@ -25,6 +25,7 @@ gulp.task('move-css',function(){
 		}))
   .pipe(cleanCSS())
   .pipe(gulp.dest('build/css'));
+  .pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('sass', function(){
@@ -60,6 +61,7 @@ gulp.task('html', function(){
 
 gulp.task('js', function(){
 	return gulp.src('src/js/**/*.js')
+		.pipe(uglify())
 		.pipe(gulp.dest('build/js'))
 		.pipe(browserSync.reload({stream: true}));
 });

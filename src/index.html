@@ -7,7 +7,7 @@
 	<title>Vr Box</title>
 
 	<!-- Bootstrap core CSS -->
-	<link href="/css/bootstrap.css" rel="stylesheet">
+	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/slick.css"/>
 	<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
@@ -118,7 +118,7 @@
 				<div class="row functions">
 					<div class="functions-img col-lg-6 col-md-6 col-sm-12 col-12">
 						<img src="img/functions_vrbox/ph1.png" alt="vrbox travel around world" class="functions-img-left">
-						<img src="img/functions_vrbox/diamond2.svg" alt="diamond icon" class="functions-img-diamond1">
+						<img src="img/functions_vrbox/diamond2.svg" alt="diamond icon" class="functions-img-diamond1 rellax" data-rellax-speed="2">
 					</div>
 					<div class="media functions-right col-lg-6 col-md-6 col-sm-12 col-12">
 						<img src="img/functions_vrbox/video-icon.png" class="mr-3" alt="...">
@@ -139,7 +139,7 @@
 					<div class="functions-img functions-img-right col-lg-6 col-md-6 col-sm-12 col-12">
 						<img src="img/functions_vrbox/girl.png" alt="" class="functions-img-girl">
 						<img src="img/functions_vrbox/ph2.png" alt="vrbox video " class="functions-img-car">
-						<img src="img/functions_vrbox/diamon1.svg" alt="diamond icon" class="functions-img-diamond2">
+						<img src="img/functions_vrbox/diamon1.svg" alt="diamond icon" class="functions-img-diamond2 rellax" data-rellax-speed="2">
 					</div>
 				</div>
 		</div>
@@ -198,7 +198,7 @@
 				<div class="row functions">
 					<div class="functions-img col-lg-6 col-md-6 col-sm-12 col-12">
 						<img src="img/functions_vrbox/ph3.png" alt="vrbox travel around world" class="functions-img-left_sport">
-						<img src="img/functions_vrbox/diamond3.svg" alt="diamond icon" class="functions-img-diamond3">
+						<img src="img/functions_vrbox/diamond3.svg" alt="diamond icon" class="functions-img-diamond3 rellax" data-rellax-speed="5">
 					</div>
 					<div class="media functions-right col-lg-6 col-md-6 col-sm-12 col-12">
 						<img src="img/functions_vrbox/ball.png" class="mr-3" alt="...">
@@ -218,7 +218,7 @@
 					</div>
 					<div class="functions-img functions-img-right col-lg-6 col-md-6 col-sm-12 col-12">
 						<img src="img/functions_vrbox/ph4.png" alt="vrbox video " class="functions-img-right_game">
-						<img src="img/functions_vrbox/diamond4.svg" alt="diamond icon" class="functions-img-diamond4">
+						<img src="img/functions_vrbox/diamond4.svg" alt="diamond icon" class="functions-img-diamond4 rellax" data-rellax-speed="5">
 					</div>
 				</div>
 
@@ -262,7 +262,7 @@
 	</section>
 
 	<section class="compatibility">
-		<img class="diamond" src="img/compatibility/coub.svg" alt="">
+		<img class="diamond rellax" src="img/compatibility/coub.svg" alt="" data-rellax-speed="4">
 		<div class="container">
 			<h2 class="title">Совместимость очков</h2>
 			<div class="row compatibility-vrbox">
@@ -418,7 +418,7 @@
 		</section>
 
 		<section class="our_work">
-			<img src="img/our_work/Coub1.svg" alt="" class="our_work-diamond">
+			<img src="img/our_work/Coub1.svg" alt="" class="our_work-diamond rellax" data-rellax-speed="6">
 			<div class="container">
 				<h2 class="title title-center">Как мы работаем</h2>
 				<div class="row our_work-items">
@@ -605,6 +605,12 @@
 		<script type="text/javascript" src="js/slick.js"></script>
 		<script src="js/wow.min.js"></script>
 		<script src="js/jquery.mask.js"></script>
+		<script src="js/rellax.js"></script>
+
+		<script>
+		  // Accepts any class name
+		  var rellax = new Rellax('.rellax');
+		</script>
 
 		<script>
 			jQuery(function($){
@@ -613,7 +619,10 @@
 		</script>
 
 		<script>
-              new WOW().init();
+			wow =  new WOW({
+				mobile: false
+			});
+            wow.init();
         </script>
 
 		<script>

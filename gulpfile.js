@@ -19,10 +19,12 @@ var uglify = require('gulp-uglify');
 
 gulp.task('move-css',function(){
   return gulp.src(
-      'src/less/*.css')
+      ['src/less/bootstrap.css', 'src/less/slick.css', 'src/less/slick-theme.css', 
+      'src/less/animate.css', 'src/less/all.css'])
   .pipe(autoprefixer({
 			browsers: ['last 2 version']
 		}))
+  .pipe(concat("all_styles.css"))
   .pipe(cleanCSS())
   .pipe(gulp.dest('build/css'));
   ;
@@ -60,7 +62,9 @@ gulp.task('html', function(){
 });
 
 gulp.task('js', function(){
-	return gulp.src('src/js/**/*.js')
+	return gulp.src(['src/js/jquery-3.4.1.js', 'src/js/bootstrap.js', 'src/js/slick.js', 'src/js/wow.min.js', 
+					'src/js/jquery.mask.js', 'src/js/rellax.js', 'src/js/script.js'])
+	 	.pipe(concat('all.js'))
 		.pipe(uglify())
 		.pipe(gulp.dest('build/js'))
 		.pipe(browserSync.reload({stream: true}));
@@ -72,12 +76,12 @@ gulp.task('images', function(){
 				imagemin.jpegtran({progressive: true}),
 				imageminJpegRecompress({
 					loops: 5,
-					min: 65,
-					max: 70,
+					min: 50,
+					max: 60,
 					quality: 'medium'
 				}),
-				 imagemin.optipng({optimizationLevel: 3}),
-				 pngquant({speed: 5, quality: [0.65, 0.7]})
+				 imagemin.optipng({optimizationLevel: 5}),
+				 pngquant({speed: 5, quality: [0.5, 0.6]})
 			]))
 		.pipe(gulp.dest('build/img'))
 });

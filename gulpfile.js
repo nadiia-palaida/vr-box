@@ -76,12 +76,12 @@ gulp.task('images', function(){
 				imagemin.jpegtran({progressive: true}),
 				imageminJpegRecompress({
 					loops: 5,
-					min: 50,
-					max: 60,
+					min: 40,
+					max: 50,
 					quality: 'medium'
 				}),
-				 imagemin.optipng({optimizationLevel: 5}),
-				 pngquant({speed: 5, quality: [0.5, 0.6]})
+				 imagemin.optipng({optimizationLevel: 6}),
+				 pngquant({speed: 5, quality: [0.4, 0.5]})
 			]))
 		.pipe(gulp.dest('build/img'))
 });

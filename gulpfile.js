@@ -25,7 +25,7 @@ gulp.task('move-css',function(){
 		}))
   .pipe(cleanCSS())
   .pipe(gulp.dest('build/css'));
-  .pipe(browserSync.reload({stream: true}));
+  ;
 });
 
 gulp.task('sass', function(){
@@ -117,6 +117,7 @@ gulp.task('serve', function(){
 		gulp.watch("src/js/**/*.js", gulp.series("js"));
 		gulp.watch("src/img/**/*.{png,jpg,jpeg}", gulp.series("images")); 
 		gulp.watch("src/img/**/*.{svg}", gulp.series("svg"));
+		gulp.watch("src/less/*.css", gulp.series("move-css"));
 });
 
 gulp.task('clean', function(){

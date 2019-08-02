@@ -17,7 +17,13 @@ var concat = require('gulp-concat');
 var cleanCSS = require('gulp-clean-css');
 var uglify = require('gulp-uglify');
 
-gulp.task('move-css',function(){
+gulp.task('move-php', function(){
+	return gulp.src('src/*.php')
+		.pipe(gulp.dest('build'))
+		.pipe(browserSync.reload({stream: true}));
+})
+
+gulp.task('move-css', function(){
   return gulp.src(
       ['src/less/bootstrap.css', 'src/less/slick.css', 'src/less/slick-theme.css', 
       'src/less/animate.css', 'src/less/all.css'])
@@ -122,13 +128,14 @@ gulp.task('serve', function(){
 		gulp.watch("src/img/**/*.{png,jpg,jpeg}", gulp.series("images")); 
 		gulp.watch("src/img/**/*.{svg}", gulp.series("svg"));
 		gulp.watch("src/less/*.css", gulp.series("move-css"));
+		gulp.watch("src/*.php", gulp.series("move-php"));
 });
 
 gulp.task('clean', function(){
 	return del('build');
 });
 
-gulp.task('build', gulp.series(['clean', 'html', 'move-css', 'otherFolders', 'fonts', 'sass', 'less', 'images', 'svg', 'js']));
+gulp.task('build', gulp.series(['clean', 'html', 'move-css', 'move-php', 'otherFolders', 'fonts', 'sass', 'less', 'images', 'svg', 'js']));
 
 
 

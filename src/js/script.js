@@ -45,6 +45,12 @@ $(document).ready(function(){
 		$('.popup').fadeOut();
 	});
 
+	$('.ask').on('click', function(event) {
+		event.preventDefault();
+		/* Act on the event */
+		$('.popup-answer').fadeIn();
+	});
+
 
 	$('.apps-descriptions').slick({
 		infinite: true,

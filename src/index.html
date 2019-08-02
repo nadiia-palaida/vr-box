@@ -164,11 +164,11 @@
 					<div class="col-lg-6 col-md-12">
 						
 						<div class="order-form wow fadeIn" data-wow-duration="5s">
-							<form action="" class="form">
+							<form action="mail.php" class="form" method="POST">
 								<h3>Введите ваши данные и нажмите заказать</h3>
-								<input type="text" placeholder="Введите имя" >
-								<input class="phone" type="text" placeholder="Введите телефон">
-								<button class="btn button">Заказать vr box 2</button>
+								<input type="text" name="user_name" placeholder="Введите имя" >
+								<input class="phone" name="user_phone" type="text" placeholder="Введите телефон">
+								<button class="btn button" type="submit">Заказать vr box 2</button>
 								<p>Перезвоним в течение 10 минут</p>
 							</form>
 						</div>
@@ -306,6 +306,7 @@
 				<a class="play_video-vrbox" href=".video_vrbox"><p>Смотреть видео</p></a>
 				<div class="container"></div>
 			</div>
+		</div>
 	</section>
 
 		<section class="apps">
@@ -469,11 +470,11 @@
 						</div>
 						<div class="col-lg-6">
 							<div class="order-form wow fadeIn" data-wow-duration="5s">
-								<form action="" class="form">
+								<form action="mail.php" class="form" method="POST">
 									<h3>Введите ваши данные и нажмите заказать</h3>
 									<input type="text" placeholder="Введите имя" >
 									<input  class="phone" type="text" placeholder="Введите телефон">
-									<button class="btn button">Заказать vr box 2</button>
+									<button class="btn button" type="submit">Заказать vr box 2</button>
 									<p>Перезвоним в течение 10 минут</p>
 								</form>
 							</div>
@@ -497,7 +498,7 @@
 		<section class="questions">
 			<div class="container">
 				<h2 class="title">Остались вопросы?</h2>
-				<a href="#">Задайте их нашему менеджеру</a>
+				<a href="#" class="ask">Задайте их нашему менеджеру</a>
 			</div>
 		</section>
 
@@ -523,10 +524,11 @@
 						</div>
 					</div>
 				</div>
+			</div>
 		</footer>
 
 		<div class="popup popup-order_phone">
-				<form action="" class="form ">
+				<form action="mail.php" class="form " method="POST">
 					<div class="cross">
 						<a href="#">
 							<i class="fas fa-times"></i>
@@ -535,18 +537,18 @@
 					<h3>Введите ваши данные и нажмите заказать звонок </h3>
 					<input type="text" placeholder="Введите имя" >
 					<input class="phone" type="text" placeholder="Введите телефон">
-					<button class="btn button">Заказать звонок</button>
+					<button class="btn button" type="submit">Заказать звонок</button>
 					<p>Перезвоним в течение 10 минут</p>
 				</form>
 		</div>
 		<div class="popup popup-answer">
-				<form action="" class="form ">
+				<form action="mail.php" class="form " method="POST">
 					<div class="cross">
 						<a href="#">
 							<i class="fas fa-times"></i>
 						</a>
 					</div>
-					<h3>Оставьте заявку мы свяжемся с вами и ответим на все вопросы</h3>
+					<h3>Оставьте заявку, мы свяжемся с вами и ответим на все вопросы</h3>
 					<input type="text" placeholder="Введите имя" >
 					<input class="phone" type="text" placeholder="Введите телефон">
 					<button class="btn button">Оставить заявку</button>
@@ -554,7 +556,7 @@
 				</form>
 		</div>
 		<div class="popup popup-order">
-				<form action="" class="form ">
+				<form action="mail.php" class="form " method="POST">
 					<div class="cross">
 						<a href="#">
 							<i class="fas fa-times"></i>
@@ -570,12 +572,12 @@
 						</select>
 						<i class="fas fa-chevron-down"></i>
 					</div>
-					<button class="btn button">Оставить заявку</button>
+					<button class="btn button" type="submit">Оставить заявку</button>
 					<p>Перезвоним в течение 10 минут</p>
 				</form>
 		</div>
 		<div class="popup popup-order_vrbox">
-				<form action="" class="form ">
+				<form action="mail.php" class="form " method="POST">
 					<div class="cross">
 						<a href="#">
 							<i class="fas fa-times"></i>
@@ -584,14 +586,14 @@
 					<h3>Введите ваши данные и нажмите заказать</h3>
 					<input type="text" placeholder="Введите имя" >
 					<input class="phone" type="text" placeholder="Введите телефон">
-					<button class="btn button">Заказать vr box 2</button>
+					<button class="btn button" type="submit">Заказать vr box 2</button>
 					<p>Перезвоним в течение 10 минут</p>
 				</form>
 		</div>
 
 		<div class=" popup video">
 			<div class="video_vrbox">
-				<iframe  width="700" height="400" src="https://www.youtube.com/embed/NYF61cFGvJA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe src="https://www.youtube.com/embed/NYF61cFGvJA" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 		</div>
 		<!-- Bootstrap core JavaScript ================================================== -->

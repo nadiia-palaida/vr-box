@@ -164,7 +164,9 @@
 					<div class="col-lg-6 col-md-12">
 						
 						<div class="order-form wow fadeIn" data-wow-duration="5s">
-							<form action="mail.php" class="form" method="POST">
+							<form action="/mailer/mail.php" class="form" method="POST">
+								<input type="hidden" name="project_name" value="VrBox">
+								<input type="hidden" name="form_subject" value="Заказать vr box 2">
 								<h3>Введите ваши данные и нажмите заказать</h3>
 								<input type="text" name="user_name" placeholder="Введите имя" >
 								<input class="phone" name="user_phone" type="text" placeholder="Введите телефон">

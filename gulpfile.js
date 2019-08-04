@@ -18,7 +18,7 @@ var cleanCSS = require('gulp-clean-css');
 var uglify = require('gulp-uglify');
 
 gulp.task('move-php', function(){
-	return gulp.src('src/*.php')
+	return gulp.src(['src/*.php'])
 		.pipe(gulp.dest('build'))
 		.pipe(browserSync.reload({stream: true}));
 })
@@ -99,8 +99,8 @@ gulp.task('fonts', function() {
 });
 
 gulp.task('otherFolders', function() {
-	return gulp.src('src/slick/**/*')
-		.pipe(gulp.dest("build/slick"))
+	return gulp.src(['src/mailer/**/*'], {base: 'src/'})
+		.pipe(gulp.dest("build"))
 
 });
 
@@ -129,6 +129,7 @@ gulp.task('serve', function(){
 		gulp.watch("src/img/**/*.{svg}", gulp.series("svg"));
 		gulp.watch("src/less/*.css", gulp.series("move-css"));
 		gulp.watch("src/*.php", gulp.series("move-php"));
+		gulp.watch(['src/mailer/**/*'], gulp.series("otherFolders"));
 });
 
 gulp.task('clean', function(){

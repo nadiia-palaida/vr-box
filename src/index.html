@@ -168,8 +168,8 @@
 								<input type="hidden" name="project_name" value="VrBox">
 								<input type="hidden" name="form_subject" value="Заказать vr box 2">
 								<h3>Введите ваши данные и нажмите заказать</h3>
-								<input type="text" name="user_name" placeholder="Введите имя" >
-								<input class="phone" name="user_phone" type="text" placeholder="Введите телефон">
+								<input type="text" name="user_name" required placeholder="Введите имя" >
+								<input class="phone" name="user_phone" required type="text" placeholder="Введите телефон">
 								<button class="btn button" type="submit">Заказать vr box 2</button>
 								<p>Перезвоним в течение 10 минут</p>
 							</form>
@@ -300,12 +300,12 @@
 		<div class="opacity">
 			<div class="container">
 				<h2 class="title">Виртуальная реальность <br>в очках vr box</h2>
-				<a class="play_video-vrbox" href=".video_vrbox">
+				<a class="play_video-vrbox" href="#">
 					<div class="vr-real-icon">
 						<img src="img/vr_real/play_market.png" alt="play market">
 					</div>
 				</a>
-				<a class="play_video-vrbox" href=".video_vrbox"><p>Смотреть видео</p></a>
+				<a class="play_video-vrbox" href="#"><p>Смотреть видео</p></a>
 				<div class="container"></div>
 			</div>
 		</div>
@@ -472,10 +472,12 @@
 						</div>
 						<div class="col-lg-6">
 							<div class="order-form wow fadeIn" data-wow-duration="5s">
-								<form action="mail.php" class="form" method="POST">
+								<form action="/mailer/mail.php" class="form" method="POST">
+									<input type="hidden" name="project_name" value="VrBox">
+									<input type="hidden" name="form_subject" value="Заказать vr box 2">
 									<h3>Введите ваши данные и нажмите заказать</h3>
-									<input type="text" placeholder="Введите имя" >
-									<input  class="phone" type="text" placeholder="Введите телефон">
+									<input type="text" name="user_name" required placeholder="Введите имя" >
+									<input  class="phone" type="text" name="user_phone" required placeholder="Введите телефон">
 									<button class="btn button" type="submit">Заказать vr box 2</button>
 									<p>Перезвоним в течение 10 минут</p>
 								</form>
@@ -530,47 +532,53 @@
 		</footer>
 
 		<div class="popup popup-order_phone">
-				<form action="mail.php" class="form " method="POST">
+				<form action="/mailer/mail.php" class="form " method="POST">
+					<input type="hidden" name="project_name" value="VrBox">
+					<input type="hidden" name="form_subject" value="Заказать звонок">
 					<div class="cross">
 						<a href="#">
 							<i class="fas fa-times"></i>
 						</a>
 					</div>
 					<h3>Введите ваши данные и нажмите заказать звонок </h3>
-					<input type="text" placeholder="Введите имя" >
-					<input class="phone" type="text" placeholder="Введите телефон">
+					<input type="text" name="user_name" required placeholder="Введите имя" >
+					<input class="phone" type="text" name="user_phone" required placeholder="Введите телефон">
 					<button class="btn button" type="submit">Заказать звонок</button>
 					<p>Перезвоним в течение 10 минут</p>
 				</form>
 		</div>
 		<div class="popup popup-answer">
-				<form action="mail.php" class="form " method="POST">
+				<form action="/mailer/mail.php" class="form " method="POST">
+					<input type="hidden" name="project_name" value="VrBox">
+					<input type="hidden" name="form_subject" value="Заказать звонок">
 					<div class="cross">
 						<a href="#">
 							<i class="fas fa-times"></i>
 						</a>
 					</div>
 					<h3>Оставьте заявку, мы свяжемся с вами и ответим на все вопросы</h3>
-					<input type="text" placeholder="Введите имя" >
-					<input class="phone" type="text" placeholder="Введите телефон">
+					<input type="text" name="user_name" required placeholder="Введите имя" >
+					<input class="phone" type="text" name="user_phone" required placeholder="Введите телефон">
 					<button class="btn button">Оставить заявку</button>
 					<p>Перезвоним в течение 10 минут</p>
 				</form>
 		</div>
 		<div class="popup popup-order">
-				<form action="mail.php" class="form " method="POST">
+				<form action="/mailer/mail.php" class="form " method="POST">
+					<input type="hidden" name="project_name" value="VrBox">
+					<input type="hidden" name="form_subject" value="Заказать vr box">
 					<div class="cross">
 						<a href="#">
 							<i class="fas fa-times"></i>
 						</a>
 					</div>
 					<h3>Введите ваши данные и нажмите заказать</h3>
-					<input type="text" placeholder="Введите имя" >
-					<input class="phone" type="text" placeholder="Введите телефон">
+					<input type="text" name="user_name" required placeholder="Введите имя" >
+					<input class="phone" type="text" name="user_phone" required placeholder="Введите телефон">
 					<div class="form-select">
 						<select name="order-vrbox">
 							<option value="Bluetooch-pult">С Bluetooch пультом</option>
-							<option value="">Без Bluetooch пульта</option>
+							<option value="Без Bluetooch-pult">Без Bluetooch пульта</option>
 						</select>
 						<i class="fas fa-chevron-down"></i>
 					</div>
@@ -579,15 +587,17 @@
 				</form>
 		</div>
 		<div class="popup popup-order_vrbox">
-				<form action="mail.php" class="form " method="POST">
+				<form action="/mailer/mail.php" class="form " method="POST">
+					<input type="hidden" name="project_name" value="VrBox">
+					<input type="hidden" name="form_subject" value="Заказать vr box 2">
 					<div class="cross">
 						<a href="#">
 							<i class="fas fa-times"></i>
 						</a>
 					</div>
 					<h3>Введите ваши данные и нажмите заказать</h3>
-					<input type="text" placeholder="Введите имя" >
-					<input class="phone" type="text" placeholder="Введите телефон">
+					<input type="text" name="user_name" required placeholder="Введите имя" >
+					<input class="phone" type="text" name="user_phone" required placeholder="Введите телефон">
 					<button class="btn button" type="submit">Заказать vr box 2</button>
 					<p>Перезвоним в течение 10 минут</p>
 				</form>

@@ -4,6 +4,7 @@ $name = $_POST['user_name'];
 $phone = $_POST['user_phone'];
 $project = $_POST['project_name'];
 $form_subject = $_POST['form_subject'];
+$bluetoth = $_POST['order-vrbox'];
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;  
@@ -16,7 +17,7 @@ $mail = new PHPMailer(true);
 
 try {
     //Server settings
-    $mail->SMTPDebug = 2;                                       // Enable verbose debug output
+    $mail->SMTPDebug = 0;                                       // Enable verbose debug output
     $mail->isSMTP();                                            // Set mailer to use SMTP
     $mail->Host       = 'smtp.ukr.net';  // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
@@ -43,16 +44,18 @@ try {
     $mail->Body    = '
     Користувач залишив свої дані, щоб '.$form_subject.' <br>
 	Ім\'я: '.$name.' <br>
-	Номер телефону: '.$phone.'
+	Номер телефону: '.$phone.' <br>
+    Комплектація: '.$bluetoth.'
     ';
     //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     $mail->send();
-    echo '<script type="text/javascript">
+   
+} catch (Exception $e) {
+       echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+}
+ echo '<script type="text/javascript">
            window.location = "/thanks.html"
       </script>';
-} catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-}
 
 ?>

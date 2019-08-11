@@ -17,38 +17,70 @@ $(document).ready(function(){
 	$('.header-btn').on('click', function(event) {
 		event.preventDefault();
 		/* Act on the event */
-		$('.popup-order_phone').fadeIn();	
+		$('html, body').addClass('hide');
+		$('.popup-order_phone')
+			.css('display', 'flex')
+			.hide()
+			.fadeIn();	
 	});
 
 	$('.btn-order_vrbox, .button-order').on('click', function(event) {
 		event.preventDefault();
 		/* Act on the event */
-		$('.popup-order_vrbox').fadeIn();	
+		$('html, body').addClass('hide');
+		$('.popup-order_vrbox')
+			.css('display', 'flex')
+			.hide()
+			.fadeIn();		
 	});
 
 	$('.about-vrbox-button').on('click', function(event) {
 		event.preventDefault();
 		/* Act on the event */
-		$('.popup-order').fadeIn();	
+		$('html, body').addClass('hide');
+		$('.popup-order')
+			.css('display', 'flex')
+			.hide()
+			.fadeIn();	
 	});
 
 	$('.play_video-vrbox').on('click', function(event) {
 		event.preventDefault();
 		/* Act on the event */
-		$('.video').fadeIn();	
+		$('html, body').addClass('hide');
+		$('.video.popup').fadeIn();	
+
+	});
+
+	$('.video_vrbox iframe').click(function (event) {
+ 		 event.stopPropagation();
+	});
+
+	$('.video').click(function(event) {
+		$('.popup').fadeOut();
+		$('html, body').removeClass('hide');
 	});
 
 
-	$('.cross').on('click', function(event) {
+	$('.cross, .popup').on('click', function(event) {
 		event.preventDefault();
 		/* Act on the event */
 		$('.popup').fadeOut();
+		$('html, body').removeClass('hide');
 	});
 
 	$('.ask').on('click', function(event) {
 		event.preventDefault();
 		/* Act on the event */
-		$('.popup-answer').fadeIn();
+		$('html, body').addClass('hide');
+		$('.popup-answer')
+			.css('display', 'flex')
+			.hide()
+			.fadeIn();	
+	});
+
+	$('.form').click(function (event) {
+ 		 event.stopPropagation();
 	});
 
 
@@ -126,4 +158,6 @@ $(document).ready(function(){
 		    }
 		]
 	});
+
+	
 });

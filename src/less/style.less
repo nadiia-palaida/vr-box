@@ -103,6 +103,10 @@ p {
 html,
 body {
 	overflow-x: hidden;
+
+	&.hide {
+		overflow-y: hidden;
+	}
 }
 
 html {
@@ -145,6 +149,12 @@ a {
 }
 
 /* Form */
+
+.video {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
 .form {
 	padding: 4rem 6rem;
@@ -214,6 +224,7 @@ a {
 
 .popup {
 	position: fixed;
+	padding: 2rem;
 	display: none;
 	left: 0;	
 	right: 0;	
@@ -223,12 +234,14 @@ a {
 	height: 100%;	
 	background-color: rgba(0, 0, 0, 0.7);
 	z-index: 1000;
+	overflow-y: auto;
+	justify-content: center;
+	align-items: center;
 
 	.form {
-		position: fixed;
-		left: 50%;
-		top: 15%;
-		transform: translateX(-50%);
+		position: relative;
+		margin-top: auto;
+		margin-bottom: auto;
 
 		.cross {
 			display: flex;
@@ -252,18 +265,24 @@ a {
 	} 
 
 	.video_vrbox {
-			position: fixed;
-			left: 50%;
-			top: 15%;
-			transform: translateX(-50%);
+		display: flex;	
+		padding: 2rem;	
+		justify-content: center;	
+		align-items: center;
+		overflow: auto;
+		height: 100%;	
 
 			iframe {
+				margin-top: auto;
+				margin-bottom: auto;
 				width: 70rem;
 				height: 40rem;
 				border: none;
 			}
 	}
 }
+
+
 
 .logo {
 

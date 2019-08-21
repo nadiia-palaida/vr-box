@@ -12,6 +12,10 @@
 
 wow.init();
 
+$(function() {
+    $('.lazy').Lazy();
+});
+
 
 $(document).ready(function(){
 	$('.header-btn').on('click', function(event) {

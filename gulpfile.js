@@ -69,7 +69,7 @@ gulp.task('html', function(){
 
 gulp.task('js', function(){
 	return gulp.src(['src/js/jquery-3.4.1.js', 'src/js/bootstrap.js', 'src/js/slick.js', 'src/js/wow.min.js', 
-					'src/js/jquery.mask.js', 'src/js/rellax.js', 'src/js/script.js'])
+					'src/js/jquery.mask.js', 'src/js/jquery.lazy.js', 'src/js/rellax.js', 'src/js/script.js'])
 	 	.pipe(concat('all.js'))
 		.pipe(uglify())
 		.pipe(gulp.dest('build/js'))

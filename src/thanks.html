@@ -6,8 +6,8 @@
 
 	<title>Спасибо за заявку</title>
 
-	<link rel="stylesheet" href="css/all_styles.css">
-	<link href="css/style.css" rel="stylesheet">
+	<link rel="preload" as="style" href="css/all_styles.css" onload="this.rel='stylesheet'">
+	<link href="css/style.css" rel="preload" as="style" onload="this.rel='stylesheet'">
 </head>
 <body>
 	<main class="main main-thanks">
@@ -19,7 +19,7 @@
 						<div class="col-lg-6 col-md-6 col-sm-12 col-12">
 							<a href="index.html">
 								<div class="logo-block">
-									<img src="img/logo.png" alt="логотип VR II" class="logo-img">
+									<img data-src="img/logo.png" src="" alt="логотип VR II" class="logo-img lazy">
 									<p class="logo-text">Производство и продажа VR очков. <br> Доставка по всей России. </p>
 								</div>
 							</a>
@@ -49,7 +49,7 @@
 	</main>
 
 
-		<script src="js/all.js"></script>
+		<script src="js/all.js" defer></script>
 
 </body>
 </html>

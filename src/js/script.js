@@ -165,3 +165,14 @@ $(document).ready(function(){
 
 	
 });
+
+var widthDoc = document.documentElement.clientWidth;
+var imgChange = document.querySelector('.main-img-right');
+console.log(widthDoc);
+
+ if (widthDoc < 992 && widthDoc > 575) {
+ 		imgChange.setAttribute('src', 'img/main/photo3-md.png');
+ 	} 
+ 	else if (widthDoc < 575) {
+ 		imgChange.setAttribute('src', 'img/main/photo3-xs.png');
+ 	} ;
